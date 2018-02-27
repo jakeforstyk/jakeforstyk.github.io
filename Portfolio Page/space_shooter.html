@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="space_shooter.css">
+    <title>Space Shooter</title>
+
+    <!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+	<!--favicon--> 
+	<link rel="icon" type="image/icon" href="JF-favicon.png">
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran|Neuton|Raleway" rel="stylesheet"> 
+
+	<!-- font awesome icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<!-- Nav bar menu-->
+<div class="topnav" id="myTopnav">
+        <a href="home.html" class="active float-left">Jake Forstyk</a>
+        <a href="https://jakeforstyk.wordpress.com/">Blog</a>
+        <a href="photography.html">Photography</a>
+        <a href="contact.html">Contact</a>  
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="home.html">Home</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+
+<div id="gameArea">
+    <iframe id="gameCanvas" src="builds/Space_Shooter2.0.html" frameborder="0" allowfullscreen width="600px" height="950px" frameborder="0" scrolling="no" marginheight="0"
+    marginwidth="0" padding="20px"></iframe>
+</div>
+
+<script>
+    function resizeGame() {
+    var gameArea = document.getElementById('gameArea');
+    var widthToHeight = 600/900;
+    var newWidth = window.innerWidth;
+    var newHeight = window.innerHeight;
+    var newWidthToHeight = newWidth/newHeight;
+
+    if (newWidthToHeight > widthToHeight) {
+        // window width is too wide relative to desired game width
+        newWidth = newHeight * widthToHeight;
+        gameArea.style.height = newHeight + 'px';
+        gameArea.style.width = newWidth + 'px';
+    } else { // window height is too hight relative to desired game heigth
+        newHeight = newWidth / widthToHeight;
+        gameArea.style.with = newWidth + 'px';
+        gameArea.style.height = newHeight + 'px';
+    }
+
+    gameArea.style.marginTop = (-newHeight/2) + 'px';
+    gameArea.style.marginLeft = (-newWidth/2) + 'px';
+    //gameArea.style.fontSize = (newWidth/400) + 'em';
+
+    var gameCanvas = document.getElementById('gameCanvas');
+    gameCanvas.width = newWidth;
+    gameCanvas.height = newHeight;
+    }
+    window.addEventListener('resize', resizeGame, false);
+    window.addEventListener('orientationchange', resizeGame, false);
+</script>            
+
+<div class="footer">
+        <ul>
+            <li><a href="http://instagram.com/jake4styk" target="_blank" class="btn btn-default"><i class="fa fa-instagram"></i> Instagram</a></li>
+            <li><a href="http://twitter.com/jforstyk" target="_blank" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
+            <li><a href="http://github.com/jakeforstyk" target="_blank" class="btn btn-default"><i class="fa fa-github"></i> GitHub</a></li>
+        </ul>
+    
+        <p class="copyright" style="font-size: small">&copy; 2018 Jake Forstyk</p>
+</div>
+
+</body>
+</html>

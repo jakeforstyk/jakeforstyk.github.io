@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Jake Forstyk is a web developer and designer in Cleveland, Ohio">
+	
+	<title>Jake Forstyk | Contact</title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="contact.css">
+
+	<!-- contact.php -->
+	<script href="contact.php"></script>
+
+	<!-- validator.js -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js">
+
+
+	<!--favicon--> 
+	<link rel="icon" type="image/icon" href="JF-favicon.png">
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Catamaran|Neuton|Raleway" rel="stylesheet"> 
+
+	<!-- font awesome icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+	<!-- Nav bar menu-->
+<div class="topnav" id="myTopnav">
+  <a href="home.html" class="active float-left">Jake Forstyk</a>
+  <a href="https://jakeforstyk.wordpress.com/">Blog</a>
+  <a href="photography.html">Photography</a>
+  <a href="contact.html">Contact</a>  
+  <a href="work.html">Work</a>
+  <a href="about.html">About</a>
+  <a href="home.html">Home</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+	<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+<!-- Bootstrap Nav bar menu
+<div class="container-fluid">
+	<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: rgb(255, 255, 255)">
+	<a class="navbar-brand" href="home.html">Jake Forstyk</a>
+		<div class="navbar-nav ml-auto">
+			<a class="nav-item nav-link active" href="about.html">About</a>
+			<a class="nav-item nav-link active" href="work.html">Work</a>
+			<a class="nav-item nav-link active" href="photography.html">Photography</a>
+			<a class="nav-item nav-link active" href="contact.html">Contact</a>
+		</div>
+	</nav>
+</div>
+-->
+
+<div class="container">
+
+	<div class="row">
+		<div class="col-lg-12 col-lg-offset-2">
+			<h1 id="say-hello">Say Hello!</h1>
+			<p>Fill out the form below or <a href="mailto:jforstyk@gmail.com?Subject=Hello" target=_"blank">email me</a> instead!</p>
+		
+			<form id="contact-form" method="post" action="contact.php" role="form">
+				<div class="messages"></div>
+				<div class="controls">
+					<div class="row">
+						
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="form_name">First Name *</label>
+								<input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your first name *" required="required" data-error="First name is required.">
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+						
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="form_lastname">Last Name *</label>
+								<input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="form_email">Email *</label>
+								<input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="email is required.">
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="form_phone">Phone</label>
+								<input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone">
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="form_message">Message *</label>
+								<textarea id="form_message" name="message" class="form-control" placeholder="Please leave a message *" rows="4" required="required" data-error="Please leave a message for me."></textarea>
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<input type="submit" class="btn btn-success btn-send" value="Send message">
+						</div>
+
+					</div>
+
+					<div class="row">
+						<div class="col-md-12">
+							<p class="text-muted"><strong>*</strong>These fields are required.</p>
+						</div>						
+					</div>
+
+				</div>
+				
+			</form>
+
+		</div>
+	</div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="validator.js"></script>
+<script src="contact.js"></script>
+
+<div class="footer">
+	<ul>
+		<li><a href="http://instagram.com/jake4styk" target="_blank" class="btn btn-default"><i class="fa fa-instagram"></i> Instagram</a></li>
+		<li><a href="http://twitter.com/jforstyk" target="_blank" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
+		<li><a href="http://github.com/jakeforstyk" target="_blank" class="btn btn-default"><i class="fa fa-github"></i> GitHub</a></li>
+	</ul>
+
+	<p class="copyright" style="font-size: small">&copy; 2017 Jake Forstyk</p>
+
+</div>
+
+
+</body>
+</html>
